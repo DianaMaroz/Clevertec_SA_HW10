@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "5d6260c3-5b0d-4a81-9b26-c7e8f40984ef",
+		"name": "News_application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31977908"
+	},
+	"item": [
+		{
+			"name": "http://93.84.86.69:9099/news_applications/v1/news",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"title\": \"Бродячие коты Пуэрто-Рико 24-12-2023\",\n    \"text\": \"Сотни бездомных кошек, которые бродят по историческому приморскому туристическому району столицы Пуэрто-Рико, будут выселены в следующем году в соответствии с планом, обнародованным во вторник Службой национальных парков США.\",\n    \"userName\": \"Диана Мороз\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}news_applications/v1/news",
+					"host": [
+						"{{url}}news_applications"
+					],
+					"path": [
+						"v1",
+						"news"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}news_applications/v1/news?id=111",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}news_applications/v1/news/54",
+					"host": [
+						"{{url}}news_applications"
+					],
+					"path": [
+						"v1",
+						"news",
+						"54"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "{{url}}news_applications/v1/news?id=111",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}news_applications/v1/news/54",
+							"host": [
+								"{{url}}news_applications"
+							],
+							"path": [
+								"v1",
+								"news",
+								"54"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 24 Dec 2023 10:15:42 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 54,\n    \"title\": \"Бродячие коты Пуэрто-Рико 24-12-2023\",\n    \"text\": \"Сотни бездомных кошек, которые бродят по историческому приморскому туристическому району столицы Пуэрто-Рико, будут выселены в следующем году в соответствии с планом, обнародованным во вторник Службой национальных парков США.\",\n    \"userName\": \"Диана Мороз\",\n    \"time\": \"1970-01-01T10:12:31.548996\"\n}"
+				}
+			]
+		},
+		{
+			"name": "sort",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://93.84.86.69:9099/news_applications/v1/news?keyword=%25%25&pageNo=0&pageSize=5&sortBy=id\n\n",
+					"protocol": "http",
+					"host": [
+						"93",
+						"84",
+						"86",
+						"69"
+					],
+					"port": "9099",
+					"path": [
+						"news_applications",
+						"v1",
+						"news"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "%25%25"
+						},
+						{
+							"key": "pageNo",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "5"
+						},
+						{
+							"key": "sortBy",
+							"value": "id\n\n"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
